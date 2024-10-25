@@ -1,6 +1,6 @@
 vim.cmd([[
-    set guifont=Iosevka\ Fixed:h14
-    colorscheme selenized
+    set guifont=Iosevka\ Fixed:h16
+    colorscheme selenized_bw
     set background=dark
 
     syntax on
@@ -16,7 +16,7 @@ vim.cmd([[
     nnoremap <leader>y = ggVG"*y
     nnoremap <leader>p = gg0dG"*p
 
-    cd C:\Users\polyg\workspace
+    cd ~\
 
     set mouse=a
     set nocompatible
@@ -33,8 +33,10 @@ vim.cmd([[
     set shiftwidth=4
     set softtabstop=4
     set showmatch
+    set scrolloff=3
 ]])
 
+vim.o.guifont = "Iosevka Fixed:h16"
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -69,6 +71,7 @@ require("lazy").setup({
         "williamboman/mason.nvim",
         "neovim/nvim-lspconfig",
         "williamboman/mason-lspconfig.nvim",
+        { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
