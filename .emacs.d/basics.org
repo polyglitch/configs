@@ -1,0 +1,32 @@
+#-*- mode: org -*-
+
+#+title: Notes for org-mode
+#+author: polyglitch
+
+* Shortcuts
+
+** General
+   + M - alt or esc
+   + C - control
+   + S - shift
+   + C-x C-s – save file
+   + C-h t – Emacs tutorial
+   + C-g - quit any screen
+   + ESC ESC ESC - quit
+
+** Org-Mode
+   + Tab and S-Tab fold and unfold
+   + Tab and S-Tab fold and unfold
+   + TAB / S-TAB – (un)fold
+   + M-up/down – move a headline up or down
+   + M-left/right – promote or demote a headline
+   + M-RET – insert a new headline
+   + za - evil-toggle-fold
+   + zc - evil-close-fold
+   + zr - evil-open-fold
+   + zm - evil-close-fold
+
+
+   
+    
+
