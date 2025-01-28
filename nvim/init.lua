@@ -7,7 +7,6 @@ vim.cmd([[
     set showmatch
 
     set statusline+=\ %F\ %M\ %Y\ %R\ row\ %l\ col\ %c\
-    set guioptions=mlrb
     set showmode
     set number
 
