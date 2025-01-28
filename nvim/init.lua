@@ -1,12 +1,13 @@
 vim.cmd([[
     set guifont=Iosevka\ Fixed:h16
-    colorscheme selenized_bw
+    colorscheme selenized
     set background=dark
 
     syntax on
     set showmatch
 
     set statusline+=\ %F\ %M\ %Y\ %R\ row\ %l\ col\ %c\
+    "set guioptions=mlrb
     set showmode
     set number
 
@@ -15,7 +16,7 @@ vim.cmd([[
     nnoremap <leader>y = ggVG"*y
     nnoremap <leader>p = gg0dG"*p
 
-    cd ~\
+    "cd ~\
 
     set mouse=a
     set nocompatible
@@ -64,12 +65,14 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         -- add your plugins here
+        "tpope/vim-surround",
+        "kyazdani42/nvim-web-devicons",
         "kyazdani42/nvim-web-devicons",
         "altercation/vim-colors-solarized",
         "crusoexia/vim-monokai",
         "williamboman/mason.nvim",
-        "neovim/nvim-lspconfig",
         "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
         { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
     },
     -- Configure any other settings here. See the documentation for more details.
