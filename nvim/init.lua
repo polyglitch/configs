@@ -1,13 +1,15 @@
 vim.cmd([[
-    set guifont=Iosevka\ Fixed:h16
-    colorscheme selenized
-    set background=dark
+    "ui settings
+    set guifont=IosevkaTerm\ Nerd\ Font\ h:20
+    set termguicolors
+    colorscheme selenized_bw
 
     syntax on
     set showmatch
 
+
     set statusline+=\ %F\ %M\ %Y\ %R\ row\ %l\ col\ %c\
-    "set guioptions=mlrb
+    set guioptions=mlrb
     set showmode
     set number
 
@@ -15,11 +17,12 @@ vim.cmd([[
     let maplead = "\<Space>"  
     nnoremap <leader>y = ggVG"*y
     nnoremap <leader>p = gg0dG"*p
-
-    "cd ~\
-
-    set mouse=a
-    set nocompatible
+    
+    "open in home directory
+    cd ~
+    
+    "open in directory of file
+    set autochdir
 
     set ignorecase
     set hlsearch
@@ -36,7 +39,7 @@ vim.cmd([[
     set scrolloff=3
 ]])
 
-vim.o.guifont = "Iosevka Fixed:h16"
+vim.o.guifont = "IosevkaTerm Nerd Font:h20"
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -61,23 +64,26 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+--"calind/selenized.nvim",
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
         -- add your plugins here
         "tpope/vim-surround",
-        "kyazdani42/nvim-web-devicons",
+        "tpope/vim-fugitive",
         "kyazdani42/nvim-web-devicons",
         "altercation/vim-colors-solarized",
         "crusoexia/vim-monokai",
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
+        "mfussenegger/nvim-lint",
+        "mhartington/formatter.nvim",
         { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { "habamax" } },
+    install = { colorscheme = { "selenized" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
 })
@@ -85,3 +91,7 @@ require("lazy").setup({
 
 -- Setup Mason
 require("mason").setup()
+require("mason-lspconfig").setup{
+    ensure_installed = { "lua_ls", "rust_analyzer"},
+    automatic_installation = true,
+}
