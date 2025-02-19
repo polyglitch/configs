@@ -82,10 +82,9 @@ require("lazy").setup({
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/nvim-cmp",
         "j-hui/fidget.nvim",
-        -- "luukvbaal/nnn.nvim", 
         "nvim-tree/nvim-tree.lua",
         'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
-        { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
+        -- { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
