@@ -82,6 +82,8 @@ require("lazy").setup({
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/nvim-cmp",
         "j-hui/fidget.nvim",
+        -- "luukvbaal/nnn.nvim", 
+        "nvim-tree/nvim-tree.lua",
         'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
         { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
     },
@@ -95,6 +97,15 @@ require("lazy").setup({
 -- lualine setup
 require("lualine").setup({})
 
+-- nvim-tree setup
+require("nvim-tree").setup({
+    view = {
+        width = 20,
+    },
+    renderer = {
+        group_empty = true,
+    },
+})
 
 -- taken from https://lsp-zero.netlify.app/docs/getting-started.html
 
@@ -170,3 +181,6 @@ cmp.setup({
     end,
   },
 })
+
+-- autostart NvimTree on launch
+vim.cmd('NvimTreeOpen')
