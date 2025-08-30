@@ -1,0 +1,16 @@
+return {
+        "tpope/vim-surround",
+        "tpope/vim-fugitive",
+        { "nvim-tree/nvim-web-devicons", opts = {} },
+        "altercation/vim-colors-solarized",
+        "crusoexia/vim-monokai",
+        "williamboman/mason.nvim",
+        "mfussenegger/nvim-lint",
+        "mhartington/formatter.nvim",
+        "j-hui/fidget.nvim",opts = {},
+        "nvim-tree/nvim-tree.lua",
+        "neovim/nvim-lspconfig",
+        "rafamadriz/friendly-snippets",
+        'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
+        { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
+}
