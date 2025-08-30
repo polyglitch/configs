@@ -59,45 +59,8 @@ vim.o.guifont = "IosevkaTerm Nerd Font:h20"
 
 require("config.lazy")
 
-<<<<<<< HEAD
 -- fidget setup
 require("fidget").setup({})
-=======
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
---"calind/selenized.nvim",
--- Setup lazy.nvim
-require("lazy").setup({
-    spec = {
-        -- add your plugins here
-        "tpope/vim-surround",
-        "tpope/vim-fugitive",
-        "kyazdani42/nvim-web-devicons",
-        "altercation/vim-colors-solarized",
-        "crusoexia/vim-monokai",
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-        "mfussenegger/nvim-lint",
-        "mhartington/formatter.nvim",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/nvim-cmp",
-        "j-hui/fidget.nvim",
-        "nvim-tree/nvim-tree.lua",
-        'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
-        -- { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
-    },
-    -- Configure any other settings here. See the documentation for more details.
-    -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { "selenized" } },
-    -- automatically check for plugin updates
-    checker = { enabled = true },
-})
->>>>>>> d718dc7a98a46e0cb90ed5cf6bc07d4050bbfdcb
 
 -- lualine setup
 require("lualine").setup({})
